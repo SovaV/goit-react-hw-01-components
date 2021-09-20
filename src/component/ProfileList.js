@@ -1,11 +1,11 @@
-import Profile from './User';
+import Profile from './profile/Profile';
 import PropTypes from 'prop-types';
 
-function UserList({ items }) {
+function ProfileList({ items }) {
   return (
     <ul>
       {items.map(item => (
-        <li>
+        <li key={item.id}>
           <Profile
             name={item.name}
             tag={item.tag}
@@ -18,11 +18,11 @@ function UserList({ items }) {
     </ul>
   );
 }
-UserList.propTypes = {
+ProfileList.propTypes = {
   item: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
     }),
   ),
 };
-export default UserList;
+export default ProfileList;
