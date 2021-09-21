@@ -1,0 +1,15 @@
+.transaction {
+  margin: 0 auto;
+  background-color: #fff;
+  border: 2px solid rgb(32, 33, 33);
+}
+.box {
+  border: 1px solid rgb(140, 143, 143);
+  background-color: rgb(23, 242, 231);
+}
+th {
+  border: 1px solid rgb(140, 143, 143);
+}
+td {
+  border: 1px solid rgb(140, 143, 143);
+}

@@ -1,0 +1,33 @@
+.statistics {
+  background-color: rgb(225, 225, 252);
+  justify-content: center;
+  margin: 0 auto;
+  display: inline-block;
+}
+.title {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.item {
+  padding: 20px;
+  background-color: teal;
+  border: 1px solid rgb(140, 143, 143);
+  display: grid;
+}
+.list {
+  display: flex;
+}
+.one {
+  composes: item; /* Приймає item в цей стиль*/
+  background-color: rgb(72, 184, 225);
+}
+.twoo {
+  background-color: rgb(178, 53, 202);
+}
+.three {
+  background-color: rgb(237, 12, 98);
+}
+.for {
+  background-color: rgb(18, 248, 225);
+}

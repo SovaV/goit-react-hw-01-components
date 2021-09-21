@@ -1,0 +1,16 @@
+.item {
+  padding-top: 15px;
+  display: flex;
+}
+.online {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(21, 255, 0);
+}
+.ofline {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}

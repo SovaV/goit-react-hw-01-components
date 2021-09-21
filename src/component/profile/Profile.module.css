@@ -1,17 +1,20 @@
 ul,
 li {
+  margin: 0 auto;
   list-style: none;
+  padding: 0;
 }
 body {
   text-align: center;
   margin: 0 auto;
   padding: 0 auto;
+  background-color: rgba(57, 121, 240, 0.535);
 }
 .profile {
-  background-color: rgba(57, 121, 240, 0.535);
+  background-color: #fff;
+
   display: inline-block;
   border: 2px solid rgb(48, 39, 39);
-  width: 300px;
 }
 .avatar {
   width: 300px;
@@ -32,11 +35,11 @@ body {
 }
 .stats {
   display: flex;
-  background-color: rgb(143, 140, 140);
+  background-color: rgb(209, 206, 206);
   justify-content: space-around;
-  padding: 15px 0px;
-  border: 1px solid red;
 }
 .prof__item {
   display: grid;
+  border: 1px solid rgb(55, 45, 45);
+  width: 80px;
 }
