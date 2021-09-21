@@ -15,7 +15,7 @@ export default function App() {
       <ProfileList items={users} />
       <Statistics title="Upload stats" stats={statisticalData} type="one" />
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />;
+      <TransactionHistory items={transactions} />
     </div>
   );
 }
