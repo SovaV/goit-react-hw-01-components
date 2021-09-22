@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div>
       <ProfileList items={users} />
-      <Statistics title="Upload stats" stats={statisticalData} type="one" />
+      <Statistics title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </div>
