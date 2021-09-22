@@ -1,14 +1,6 @@
 import PropTypes from 'prop-types';
 import s from '../statistics/statistics.module.css';
-
-function getRandomColor() {
-  let letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
+import getRandomColor from '../helper/randomColor';
 
 function Statistics({ stats, title }) {
   return (
@@ -27,10 +19,11 @@ function Statistics({ stats, title }) {
 }
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
-
   stat: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.string.isRequired,
     }),
   ),
 };
