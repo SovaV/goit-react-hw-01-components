@@ -11,9 +11,13 @@
 }
 .item {
   padding: 20px;
-  border: 1px solid rgb(140, 143, 143);
+  background-color: teal;
   display: grid;
 }
 .list {
   display: flex;
+}
+.one {
+  composes: item; /* Приймає item в цей стиль*/
+  background-color: rgb(72, 184, 225);
 }

@@ -30,16 +30,28 @@ body {
   color: rgb(143, 140, 140);
 }
 .location {
+  margin: 0;
   font-size: 16px;
   color: rgb(143, 140, 140);
+  border-bottom: 2px solid rgb(48, 39, 39);
+  padding-bottom: 15px;
 }
 .stats {
   display: flex;
-  background-color: rgb(209, 206, 206);
+  background-color: rgb(225, 224, 224);
   justify-content: space-around;
 }
 .prof__item {
   display: grid;
-  border: 1px solid rgb(55, 45, 45);
   width: 80px;
+  padding: 15px 0;
+}
+.prof__item:not(:last-child) {
+  border-right: 1px solid rgb(55, 45, 45);
+}
+.label {
+  color: rgb(143, 140, 140);
+}
+.quantity {
+  font-weight: bold;
 }

@@ -13,7 +13,7 @@ function Transaction({ items }) {
       </thead>
       {items.map(item => (
         <tbody key={item.id}>
-          <tr>
+          <tr className={t.tra}>
             <td>{item.type}</td>
             <td>{item.amount}</td>
             <td>{item.currency}</td>
