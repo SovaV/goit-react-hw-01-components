@@ -11,12 +11,12 @@ function Transaction({ items }) {
           <th>Currency</th>
         </tr>
       </thead>
-      {items.map((item, index) => (
-        <tbody key={index}>
+      {items.map(({ type, amount, currency, id }) => (
+        <tbody key={id}>
           <tr className={t.tra}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
           </tr>
         </tbody>
       ))}
@@ -24,9 +24,9 @@ function Transaction({ items }) {
   );
 }
 Transaction.propTypes = {
-  item: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
-      index: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,

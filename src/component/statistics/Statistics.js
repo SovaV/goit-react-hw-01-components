@@ -7,10 +7,10 @@ function Statistics({ stats, title }) {
     <section className={s.statistics}>
       <h2 className={s.title}>{title}</h2>
       <ul className={s.list}>
-        {stats.map((stat, index) => (
-          <li key={index} className={s.item} style={{ backgroundColor: getRandomColor() }}>
-            <span className={s}>{stat.label}</span>
-            <span className={s.percentage}>{stat.percentage}%</span>
+        {stats.map(({ label, percentage, id }) => (
+          <li key={id} className={s.item} style={{ backgroundColor: getRandomColor() }}>
+            <span className={s}>{label}</span>
+            <span className={s.percentage}>{percentage}%</span>
           </li>
         ))}
       </ul>
@@ -21,9 +21,11 @@ Statistics.defaultProps = {
   title: 'Upload stats',
 };
 Statistics.propTypes = {
-  stat: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
-      index: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     }),
   ),
 };
