@@ -5,7 +5,7 @@ import getRandomColor from '../helper/randomColor';
 function Statistics({ stats, title }) {
   return (
     <section className={s.statistics}>
-      <h2 className={s.title}>{title}</h2>
+      {title && <h2 className={s.title}>{title}</h2>}
       <ul className={s.list}>
         {stats.map(({ label, percentage, id }) => (
           <li key={id} className={s.item} style={{ backgroundColor: getRandomColor() }}>
@@ -17,10 +17,9 @@ function Statistics({ stats, title }) {
     </section>
   );
 }
-Statistics.defaultProps = {
-  title: 'Upload stats',
-};
+
 Statistics.propTypes = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
