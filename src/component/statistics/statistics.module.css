@@ -1,8 +1,9 @@
 .statistics {
-  background-color: rgb(225, 225, 252);
   justify-content: center;
   margin: 0 auto;
-  display: inline-block;
+  display: block;
+  width: 500px;
+  margin-bottom: 20px;
 }
 .title {
   margin: 0;
@@ -16,8 +17,4 @@
 }
 .list {
   display: flex;
-}
-.one {
-  composes: item; /* Приймає item в цей стиль*/
-  background-color: rgb(72, 184, 225);
 }
