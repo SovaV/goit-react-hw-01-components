@@ -5,18 +5,21 @@ import f from './friends/friends.module.css';
 function FriendsList({ friends }) {
   return (
     <ul className={f.item}>
-      {friends.map(friend => (
-        <li key={friend.id} className={f.list}>
-          <Friends name={friend.name} avatar={friend.avatar} isOnline={friend.isOnline} />
+      {friends.map(({ name, avatar, isOnline, id }) => (
+        <li key={id} className={f.list}>
+          <Friends name={name} avatar={avatar} isOnline={isOnline} />
         </li>
       ))}
     </ul>
   );
 }
 FriendsList.propTypes = {
-  friend: PropTypes.arrayOf(
+  friends: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
     }),
   ),
 };

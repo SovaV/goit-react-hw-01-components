@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import s from '../statistics/statistics.module.css';
-import getRandomColor from '../helper/randomColor';
-
+import getRandomColor from '../../helper/randomColor';
 function Statistics({ stats, title }) {
   return (
     <section className={s.statistics}>
